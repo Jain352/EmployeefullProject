@@ -1,1 +1,47 @@
-<p>roles works!</p>
+
+
+<p>{{firstName}}</p>
+
+<div class="row">
+    <div class ="col-3">
+        <p>{{firstName}}</p>
+    </div>
+    <div class ="col-3">
+        <p>{{version}}</p>
+    </div>
+    <div class ="col-3">
+        <p>{{currentDate}}</p>
+    </div>
+
+    <div class="row">
+
+        <div class="col-3">
+            <input type="text" [value]="firstName" class="form-control">
+
+        </div>
+
+        <div class="col-3">
+            <input type="text" [(ngModel)]="firstName" />
+
+        </div>
+
+        <div class="col-3">
+            <input [type]="inputType"/>
+
+        </div>
+
+<div class="row">
+    <div class="col-3">
+  
+        <button class="btn btn-sucess" (click)="showWelcomeAlert()">Show</button>
+    </div>
+    <div class="col-3">
+  
+        <button class="btn btn-sucess" (click)="showMessage('sdfsfdsf')">Show hhhhhhhhhhh</button>
+    </div>
+
+</div>
+
+
+    </div>
+
