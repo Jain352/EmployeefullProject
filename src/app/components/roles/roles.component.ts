@@ -20,7 +20,7 @@ export class RolesComponent implements OnInit{
   ngOnInit(): void 
   {
     this.getAllRoles()
-    alert("nter into ngin");
+   // alert("nter into ngin");
   }
 
   getAllRoles()
@@ -32,7 +32,7 @@ this.http.get<APIResponseModel>("https://freeapi.miniprojectideas.com/api/Employ
 
 
 
-alert("nter into ngtwon");
+//alert("nter into ngtwon");
   }
 
 
