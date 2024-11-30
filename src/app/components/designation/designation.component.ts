@@ -12,12 +12,14 @@ import { APIResponseModel } from '../../model/interface/role';
 export class DesignationComponent implements OnInit {
 
   designationList:IDesignation[]=[];
+  isLoader:boolean=true;
   masterservice=inject(MasterService);
 
   ngOnInit(): void {
     this.masterservice.getDesignation().subscribe((result:APIResponseModel)=>
       {
-        this.designationList=result.data         
+        this.designationList=result.data;
+        this.isLoader=false;         
       }
     ,
     error=>{alert("API Block")
