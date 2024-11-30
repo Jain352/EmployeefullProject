@@ -3,19 +3,27 @@
     <div class="col-12">
 
         <div class="btn-group btn-group-lg">
-            <button type="button" class="btn btn-primary">Roles</button>
-            <button type="button" class="btn btn-primary">Designation</button>
+  <button type="button"
+ (click)="ChangeTab('Roles')" class="btn" [ngClass]="currentComponent=='Roles'?'btn-sucess':'btn-primary'">Roles</button>
+            <button type="button"
+  (click)="ChangeTab('Designation')"  class="btn" [ngClass]="currentComponent=='Designation'?'btn-sucess':'btn-primary'" >Designation</button>
            
           </div>
         
     </div>
 
     <div class="row">
-        <div class="col-12">
+        <div class="col-12" *ngIf="currentComponent=='Roles'">
     
             <app-roles></app-roles>
-            <app-designation></app-designation>
+            
               </div>
             
+              <div class="col-12" *ngIf="currentComponent=='Designation'">
+    
+               
+                <app-designation></app-designation>
+                  </div>
+
         </div>
 </div>

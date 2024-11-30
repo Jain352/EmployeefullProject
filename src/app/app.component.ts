@@ -5,7 +5,7 @@ import { MasterComponent } from './components/master/master.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,MasterComponent],
+  imports: [RouterOutlet,RolesComponent,MasterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component,inject,OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Interface } from 'readline';
 
 @Component({
   selector: 'app-roles',
@@ -7,25 +9,79 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './roles.component.html',
   styleUrl: './roles.component.css'
 })
-export class RolesComponent {
+export class RolesComponent implements OnInit{
 
-  firstName: string ="Angular Tutorial";
-  angularVersion="version 18";
-  version:number=18;
-  isActive:boolean=false;
-  currentDate: Date =new Date;
-  inputType:string="radio";
+  roleList:Interface[]=[];
 
-  showWelcomeAlert()
+  http=inject(HttpClient);
+
+  ngOnInit(): void 
   {
-    alert("dsds")
-
+    this.getAllRoles()
+    //alert("nter into ngin");
   }
 
-  showMessage(message:string)
+  getAllRoles()
   {
-    alert(message)
+this.http.get("https://freeapi.miniprojectideas.com/api/EmployeeApp/GetAllRoles").subscribe((res:any)=>{
+  this.roleList=res.data;
+  
+});
 
+
+
+//alert("nter into ngtwon");
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // firstName: string ="Angular Tutorial";
+  // angularVersion="version 18";
+  // version:number=18;
+  // isActive:boolean=false;
+  // currentDate: Date =new Date;
+  // inputType:string="radio";
+
+  // showWelcomeAlert()
+  // {
+  //   alert("dsds")
+
+  // }
+
+  // showMessage(message:string)
+  // {
+  //   alert(message)
+
+  // }
 
 }
