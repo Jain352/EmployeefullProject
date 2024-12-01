@@ -14,8 +14,8 @@ export class ClientService {
 
     getAllClients() : Observable<APIResponseModel>
     {
-
-      return this.http.get<APIResponseModel>(environment.API_URL+"GetAllDesignation");
+     /* https://cors-anywhere.herokuapp.com/https://freeapi.miniprojectideas.com/api/ClientStriveGetAllClients*/
+      return this.http.get<APIResponseModel>(environment.API_URL+"GetAllClients");
 
     }
     addUpdate(obj:Client): Observable<APIResponseModel>
