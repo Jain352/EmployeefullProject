@@ -10,10 +10,20 @@
                     <thead>
                         <tr> 
                             <th>Sr No</th>
+                            <th>Company Name</th>
+                            <th>Person No</th>
+                            <th>Contact No</th>
+                            <th>City</th>
                             <th>Role Name</th>
                         </tr>
                     </thead>
                     <tbody>
+
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <!-- Add rows for client data here -->
                     </tbody>
                 </table>
@@ -32,66 +42,71 @@
                     <!-- Contact Person Name -->
                     <div class="col-6">
                         <label for="contactPersonName">Contact Person Name</label>
-                        <input type="text" class="form-control" id="contactPersonName">
+                        <input type="text" [(ngModel)]="ClientObj." [(ngModel)]="ClientObj." class="form-control"  id="contactPersonName">
                     </div>
 
                     <!-- Company Name -->
                     <div class="col-6">
                         <label for="companyName">Company Name</label>
-                        <input type="text" class="form-control" id="companyName">
+                        <input type="text" [(ngModel)]="ClientObj." class="form-control"  id="companyName">
                     </div>
 
                     <!-- Address -->
                     <div class="col-6">
                         <label for="address">Address</label>
-                        <input type="text" class="form-control" id="address">
+                        <input type="text" [(ngModel)]="ClientObj." class="form-control"  id="address">
                     </div>
 
                     <!-- City -->
                     <div class="col-6">
                         <label for="city">City</label>
-                        <input type="text" class="form-control" id="city">
+                        <input type="text" [(ngModel)]="ClientObj." class="form-control"  id="city">
                     </div>
 
                     <!-- Pincode -->
                     <div class="col-6">
                         <label for="pincode">Pincode</label>
-                        <input type="text" class="form-control" id="pincode">
+                        <input type="text" [(ngModel)]="ClientObj." class="form-control"  id="pincode">
                     </div>
 
                     <!-- State -->
                     <div class="col-6">
                         <label for="state">State</label>
-                        <input type="text" class="form-control" id="state">
+                        <input type="text" [(ngModel)]="ClientObj." class="form-control"  id="state">
                     </div>
 
                     <!-- Employee Strength -->
                     <div class="col-6">
                         <label for="employeeStrength">Employee Strength</label>
-                        <input type="text" class="form-control" id="employeeStrength">
+                        <input type="text" [(ngModel)]="ClientObj." class="form-control"  id="employeeStrength">
                     </div>
 
                     <!-- GST Number -->
                     <div class="col-6">
                         <label for="gstNo">GST No</label>
-                        <input type="text" class="form-control" id="gstNo">
+                        <input type="text" [(ngModel)]="ClientObj." class="form-control"  id="gstNo">
                     </div>
 
                     <!-- Contact Number -->
                     <div class="col-6">
                         <label for="contactNo">Contact No</label>
-                        <input type="text" class="form-control" id="contactNo">
+                        <input type="text" [(ngModel)]="ClientObj." class="form-control"  id="contactNo">
                     </div>
 
                     <!-- Registration Number -->
                     <div class="col-6">
                         <label for="regNo">Reg No</label>
-                        <input type="text" class="form-control" id="regNo">
+                        <input type="text" [(ngModel)]="ClientObj." class="form-control"  id="regNo">
                     </div>
-
+                <div class="row pt-2">
+                    <div class="col-6 text-center">
+                       <button class="btn btn-secondary">Reset</button>
+                    </div>
                     <div class="col-6">
-                       <button class="btn btn-success">Save Client</button>
-                    </div>
+                        <button class="btn btn-success">Save Client</button>
+                     </div>
+
+                </div>
                 </div>
             </div>
         </div>
